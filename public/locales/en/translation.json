@@ -1,0 +1,16 @@
+{
+    "headers": {
+        "vrijeme": "Mon - Sat: 07:00 - 15:00",
+        "alt": {
+            "mne": "Montenegrian",
+            "eng": "English",
+            "rus": "Russian"
+        }
+    },
+    "navmenu": {
+        "pocetna": "Home",
+        "o-nama": "About Us",
+        "usluge": "Services",
+        "kontakt": "Contact"
+    }
+}

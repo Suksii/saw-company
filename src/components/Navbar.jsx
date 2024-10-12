@@ -35,7 +35,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className={`hidden md:flex justify-evenly items-center py-4 shadow_box z-50 ${sticky ? 'sticky top-0 bg-white' : 'bg-transparent'} transition-colors duration-500`}>
+            <nav className={`hidden md:flex justify-evenly items-center py-4 shadow_box z-40 ${sticky ? 'sticky top-0 bg-white' : 'bg-transparent'} transition-colors duration-500`}>
                 {navItems.map((item, index) => {
                     return (
                         <Link to={item.link}
@@ -54,7 +54,7 @@ const Navbar = () => {
                 </div>
             </nav>
             <div className="relative">
-                <div className={`absolute flex flex-col bg-blue-600 text-center left-0 right-0 ${toggle ? 'translate-y-0 opacity-100' : '-translate-y-[100vh] opacity-0'} duration-1000 z-50`}>
+                <div className={`absolute flex flex-col bg-blue-600 text-center left-0 right-0 ${toggle ? 'translate-y-0 opacity-100' : '-translate-y-[100vh] opacity-0'} duration-1000 z-40`}>
                     {navItems.map((item, index) => {
                         return (
                             <Link to={item.link}

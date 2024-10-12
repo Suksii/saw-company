@@ -1,0 +1,16 @@
+{
+    "headers": {
+        "vrijeme": "Pon - Pet: 07:00 - 15:00",
+        "alt": {
+            "mne": "Crnogorski",
+            "eng": "Engleski",
+            "rus": "Ruski"
+        }
+    },
+    "navmenu": {
+        "pocetna": "Početna",
+        "o-nama": "O nama",
+        "usluge": "Usluge",
+        "kontakt": "Kontakt"
+    }
+}
