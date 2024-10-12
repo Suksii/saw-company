@@ -1,13 +1,24 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import HamburgerMenu from './HamburgerMenu';
 import { useTranslation } from 'react-i18next';
+import logo from '../assets/images/logo1.png';
+import { useLocation } from 'react-router-dom';
 
 const Navbar = () => {
 
     const [toggle, setToggle] = useState(false);
     const [sticky, setSticky] = useState(false);
+    const [active, setActive] = useState('/');
     const { t } = useTranslation();
+    const path = useLocation().pathname;
+
+    console.log(path);
+
+    useEffect(() => {
+        setActive(path)
+    }, [path])
+
 
     const navItems = [
         { name: t('navmenu.pocetna'), link: '/' },
@@ -37,19 +48,29 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className={`hidden md:flex justify-evenly items-center py-4 shadow_box z-40 ${sticky ? 'sticky top-0 bg-white' : 'bg-transparent'} transition-colors duration-500`}>
-                {navItems.map((item, index) => {
-                    return (
-                        <Link to={item.link}
-                            key={index}
-                            onClick={() => scrollOnTop("instant")}
-                            className={`text-xl font-semibold text-blue-900 hover:text-blue-50 duration-500 px-3 py-2 hover:bg-blue-600`}>
-                            {item.name}
-                        </Link>
-                    );
-                })
-                }
+            <nav className={`hidden md:flex items-center z-40 ${sticky ? 'sticky top-0 bg-white' : 'bg-transparent'} transition-colors duration-500`}>
+                <div className="md:w-[70%] lg:w-[60%] mx-auto flex justify-between items-center">
+                    <div className="relative">
+                        <div className="">
+                            <img src={logo} alt="IngInspekt" className="h-24 w-24" />
+                        </div>
+                    </div>
+                    <div className="flex items-center gap-0.5">
+                        {navItems.map((item, index) => {
+                            return (
+                                <Link to={item.link}
+                                    key={index}
+                                    onClick={() => scrollOnTop("instant")}
+                                    className={`text-xl font-semibold hover:text-blue-50 duration-500 px-3 py-2 hover:bg-blue-600 ${active === item.link ? 'bg-blue-600 text-blue-50' : 'text-blue-900'}`}>
+                                    {item.name}
+                                </Link>
+                            );
+                        })
+                        }
+                    </div>
+                </div>
             </nav>
+
             <nav className="flex justify-end md:hidden items-center bg-blue-600 px-2 py-4">
                 <div className="z-50">
                     <HamburgerMenu handleClick={handleClick} isOpen={toggle} />
