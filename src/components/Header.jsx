@@ -4,22 +4,35 @@ import { BsClock } from "react-icons/bs";
 import MNE from "../assets/languages/mne.gif";
 import UNK from "../assets/languages/unk.gif";
 import RUS from "../assets/languages/rus.gif";
+import { useTranslation } from "react-i18next";
+import i18n from "../i18n";
 
 const Header = () => {
+
+    const { t } = useTranslation();
+
     const languages = [
         {
             image: MNE,
-            alt: 'montenegrian'
+            lang: 'mne',
+            alt: t('headers.alt.mne')
         },
         {
             image: UNK,
-            alt: 'english'
+            lang: 'en',
+            alt: t('headers.alt.en')
         },
         {
             image: RUS,
-            alt: 'russian'
+            lang: 'rus',
+            alt: t('headers.alt.rus')
         }
     ]
+
+
+    const handleLanguage = (lang) => {
+        i18n.changeLanguage(lang);
+    }
 
     return (
         <div className={`flex justify-between h-fit items-center px-[5vw] bg-blue-900 relative z-50 font-medium`}>
@@ -43,12 +56,16 @@ const Header = () => {
                 {
                     languages.map((lang, index) => {
                         return (
-                            <div key={index} className={`p-4  cursor-pointer hover:bg-blue-700 border-blue-50 ${index === 0 && 'border-l'} border-r`}
+                            <div key={index}
+                                title={lang.alt}
+                                className={`p-4  cursor-pointer hover:bg-blue-700 border-blue-50 ${index === 0 && 'border-l'} border-r`}
+                                onClick={() => handleLanguage(lang.lang)}
                             >
                                 <img src={lang.image}
                                     alt={lang.alt}
                                     title={lang.alt}
-                                    className="w-5 h-3" />
+                                    className="w-5 h-3"
+                                />
                             </div>
                         )
                     })

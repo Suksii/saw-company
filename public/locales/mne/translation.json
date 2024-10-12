@@ -3,13 +3,13 @@
         "vrijeme": "Pon - Pet: 07:00 - 15:00",
         "alt": {
             "mne": "Crnogorski",
-            "eng": "Engleski",
+            "en": "Engleski",
             "rus": "Ruski"
         }
     },
     "navmenu": {
         "pocetna": "Početna",
-        "o-nama": "O nama",
+        "o_nama": "O nama",
         "usluge": "Usluge",
         "kontakt": "Kontakt"
     }

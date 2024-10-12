@@ -1,17 +1,19 @@
 import { useState } from 'react';
 import { Link } from "react-router-dom";
 import HamburgerMenu from './HamburgerMenu';
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
 
     const [toggle, setToggle] = useState(false);
     const [sticky, setSticky] = useState(false);
+    const { t } = useTranslation();
 
     const navItems = [
-        { name: 'Home', link: '/' },
-        { name: 'About us', link: '/about' },
-        { name: 'Services', link: '/services' },
-        { name: 'Contact', link: '/contact' },
+        { name: t('navmenu.pocetna'), link: '/' },
+        { name: t('navmenu.o_nama'), link: '/about' },
+        { name: t('navmenu.usluge'), link: '/services' },
+        { name: t('navmenu.kontakt'), link: '/contact' },
     ];
 
     window.addEventListener('scroll', () => {
