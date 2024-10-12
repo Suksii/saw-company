@@ -1,12 +1,39 @@
+import { useState } from "react";
 import construction from "../assets/images/construction.jpg";
+import { MdArrowBackIos } from "react-icons/md";
+import { MdArrowForwardIos } from "react-icons/md";
 
 const HomePage = () => {
 
+    const titles = [
+        'Home page',
+        'Welcome',
+        'Hello, good evening'
+    ]
+
+    const [shownIndex, setShownIndex] = useState(0);
+
+    const showNext = () => {
+        if (shownIndex !== titles.length - 1) {
+            setShownIndex(prev => prev + 1)
+        } else {
+            setShownIndex(0)
+        }
+    }
+    const showPrev = () => {
+        if (shownIndex !== 0) {
+            setShownIndex(prev => prev - 1)
+        } else {
+            setShownIndex(titles.length - 1)
+        }
+    }
 
     return (
         <div className="h-[70vh] flex items-center justify-center bg-cover bg-center relative" style={{ backgroundImage: `url(${construction})` }}>
             <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-            <p className="relative text-white text-4xl font-bold">HomePage</p>
+            <MdArrowBackIos className="absolute top 1/2 translate-y-1/2 left-[25%] text-blue-50 cursor-pointer" size={38} onClick={showPrev}/>
+            <MdArrowForwardIos className="absolute top 1/2 translate-y-1/2 right-[25%] text-blue-50 cursor-pointer" size={38} onClick={showNext}/>
+            <p className="relative text-white text-4xl font-bold">{titles[shownIndex]}</p>
         </div>
     );
 };
