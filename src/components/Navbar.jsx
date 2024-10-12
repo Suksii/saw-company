@@ -13,8 +13,6 @@ const Navbar = () => {
     const { t } = useTranslation();
     const path = useLocation().pathname;
 
-    console.log(path);
-
     useEffect(() => {
         setActive(path)
     }, [path])
@@ -28,7 +26,7 @@ const Navbar = () => {
     ];
 
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 64) {
+        if (window.scrollY > 44) {
             setSticky(true)
         } else {
             setSticky(false)
@@ -48,12 +46,10 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className={`hidden md:flex items-center z-40 ${sticky ? 'sticky top-0 bg-white' : 'bg-transparent'} transition-colors duration-500`}>
+            <nav className={`hidden w-full md:flex items-center z-40 ${sticky ? ' bg-blue-400 bg-opacity-80 sticky top-0' : 'bg-transparent fixed top-[44px]'} transition-all duration-500`}>
                 <div className="md:w-[70%] lg:w-[60%] mx-auto flex justify-between items-center">
                     <div className="relative">
-                        <div className="">
-                            <img src={logo} alt="IngInspekt" className="h-24 w-24" />
-                        </div>
+                        <img src={logo} alt="IngInspekt" className="h-24 w-24" />
                     </div>
                     <div className="flex items-center gap-0.5">
                         {navItems.map((item, index) => {
@@ -70,7 +66,6 @@ const Navbar = () => {
                     </div>
                 </div>
             </nav>
-
             <nav className="flex justify-end md:hidden items-center bg-blue-600 px-2 py-4">
                 <div className="z-50">
                     <HamburgerMenu handleClick={handleClick} isOpen={toggle} />

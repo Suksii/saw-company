@@ -13,13 +13,16 @@ function App() {
   return (
     <>
       <Header />
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutUs />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <div className="relative"> 
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
+
 
     </>
   )
