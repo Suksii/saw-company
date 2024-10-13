@@ -57,7 +57,7 @@ const Navbar = () => {
                                 <Link to={item.link}
                                     key={index}
                                     onClick={() => scrollOnTop("instant")}
-                                    className={`text-xl font-semibold hover:text-blue-50 duration-500 px-3 py-2 hover:bg-blue-600 ${active === item.link ? 'bg-blue-600 text-blue-50' : 'text-blue-900'}`}>
+                                    className={`text-xl font-semibold text-blue-50 duration-500 px-3 py-2 hover:bg-blue-600 ${active === item.link ? 'bg-blue-600' : ''}`}>
                                     {item.name}
                                 </Link>
                             );
