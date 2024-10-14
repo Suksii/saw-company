@@ -7,7 +7,7 @@ import RUS from "../assets/languages/rus.gif";
 import { useTranslation } from "react-i18next";
 import i18n from "../i18n";
 
-const Header = () => {
+const Header = ({ phone, phoneAleksa, sendEmail, phoneCall, emailAddress }) => {
 
     const { t } = useTranslation();
 
@@ -39,18 +39,18 @@ const Header = () => {
             <div className="hidden lg:flex items-center gap-2">
                 <BsTelephone className="text-amber-600" />
                 <p className="flex gap-2">
-                    <span className="text-blue-50 hover:text-blue-600 underline cursor-pointer">+382 69 231 231</span>{" "}
+                    <span className="text-blue-50 hover:text-blue-600 underline cursor-pointer" onClick={() => phoneCall(phone)}>{phone}</span>{" "}
                     <span className="text-blue-50 text-lg">&</span>{" "}
-                    <span className="text-blue-50 hover:text-blue-600 underline cursor-pointer">+382 69 231 231</span>
+                    <span className="text-blue-50 hover:text-blue-600 underline cursor-pointer" onClick={() => phoneCall(phoneAleksa)}>{phoneAleksa}</span>
                 </p>
             </div>
             <div className="flex items-center gap-2">
                 <BsEnvelope className="text-amber-600" />
-                <span className="text-blue-50 hover:text-blue-600 underline">primjer@gmail.com</span>
+                <span className="text-blue-50 hover:text-blue-600 underline cursor-pointer" onClick={sendEmail}>{emailAddress}</span>
             </div>
             <div className="hidden lg:flex items-center gap-2">
                 <BsClock className="text-amber-600" />
-                <span className="text-blue-50">radno vrijeme</span>
+                <span className="text-blue-50">{t('headers.vrijeme')}</span>
             </div>
             <div className="flex items-center">
                 {

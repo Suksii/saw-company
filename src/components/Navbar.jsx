@@ -66,15 +66,13 @@ const Navbar = () => {
                     </div>
                 </div>
             </nav>
-            <nav className="relative">
-                <div className="absolute left-0 top-0 px-4 z-50">
+            <nav className="relative block md:hidden">
+                <div className="absolute left-0 top-0 px-4 z-40">
                     <img src={logo} alt="IngInspekt" className="h-24 w-24" />
                 </div>
                 <div className="z-50 absolute right-0 top-0 p-4">
                     <HamburgerMenu handleClick={handleClick} isOpen={toggle} />
                 </div>
-            </nav>
-            <div className="relative">
                 <div className={`absolute flex flex-col bg-blue-600 text-center left-0 right-0 ${toggle ? 'translate-y-0 opacity-100' : '-translate-y-[100vh] opacity-0'} duration-1000 z-40`}>
                     {navItems.map((item, index) => {
                         return (
@@ -91,7 +89,7 @@ const Navbar = () => {
                         );
                     })}
                 </div>
-            </div>
+            </nav>
         </>
     );
 };

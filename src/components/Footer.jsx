@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FaClock, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 
-const Footer = () => {
+const Footer = ({phone, phoneAleksa, sendEmail, phoneCall, emailAddress}) => {
 
     const { t } = useTranslation();
 
@@ -38,15 +38,15 @@ const Footer = () => {
                         <h2 className="text-2xl font-bold mb-4">{t('footer.kontakt')}</h2>
                         <p className="flex flex-col items-center justify-center">
                             <span>{t('footer.telefon')}</span>
-                            <span className="text-sm">+382 (0) 20 674 179</span>
+                            <span className="text-sm cursor-pointer underline" onClick={() => phoneCall(phone)}>{phone}</span>
                         </p>
                         <p className="flex flex-col items-center justify-center">
                             <span>{t('footer.mobilni')}</span>
-                            <span className="text-sm">+382 69 078 048</span>
+                            <span className="text-sm cursor-pointer underline" onClick={() => phoneCall(phoneAleksa)}>{phoneAleksa}</span>
                         </p>
                         <p className="flex flex-col items-center justify-center">
                             <span>{t('footer.email')}</span>
-                            <span className="text-sm">inginspekt@yahoo.com</span>
+                            <span className="text-sm cursor-pointer underline" onClick={sendEmail}>{emailAddress}</span>
                         </p>
                     </div>
                     <div className="flex flex-col items-center gap-1">

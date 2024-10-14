@@ -11,9 +11,21 @@ import Footer from './components/Footer'
 
 function App() {
 
+  const emailAddress = 'inginspekt@yahoo.com';
+  const phoneAleksa = '+382 69 078 048';
+  const phone = '+382 (0) 20 674 179'
+
+  const sendEmail = () => {
+    window.open(`mailto:${emailAddress}`)
+  }
+
+  const phoneCall = ({ call }) => {
+    window.open(`tel:${call}`)
+  }
+
   return (
     <>
-      <Header />
+      <Header phoneCall={phoneCall} sendEmail={sendEmail} phoneAleksa={phoneAleksa} phone={phone} emailAddress={emailAddress}/>
       <div className="relative">
         <Navbar />
         <Routes>
@@ -22,7 +34,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-        <Footer />
+        <Footer phoneCall={phoneCall} sendEmail={sendEmail} phoneAleksa={phoneAleksa} phone={phone} emailAddress={emailAddress} />
       </div>
 
 
