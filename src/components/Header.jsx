@@ -35,7 +35,7 @@ const Header = () => {
     }
 
     return (
-        <div className={`flex justify-between h-fit items-center px-[5vw] bg-blue-900 relative z-50 font-medium`}>
+        <div className={`sticky top-0 flex justify-between h-fit items-center px-[5vw] bg-blue-900 z-50 font-medium`}>
             <div className="hidden lg:flex items-center gap-2">
                 <BsTelephone className="text-amber-600" />
                 <p className="flex gap-2">
