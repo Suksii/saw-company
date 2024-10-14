@@ -4,6 +4,7 @@ import { MdArrowBackIos } from "react-icons/md";
 import { MdArrowForwardIos } from "react-icons/md";
 import { motion } from "framer-motion"
 import FeatureSection from "../sections/FeatureSection";
+import CertificatesSection from "../sections/CertificatesSection";
 
 const HomePage = () => {
 
@@ -54,6 +55,7 @@ const HomePage = () => {
                 </div>
             </div>
                 <FeatureSection />
+                <CertificatesSection />
         </>
     );
 };
