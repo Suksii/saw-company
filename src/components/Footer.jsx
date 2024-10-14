@@ -1,14 +1,25 @@
+import { useEffect, useState } from "react";
 import { FaClock, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 
 const Footer = () => {
+
+    const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentYear(new Date().getFullYear());
+        }, 1000);
+
+        return () => clearInterval(interval)
+    })
 
     const location = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2944.762130175613!2d19.254419676582646!3d42.43279783050239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134deb3faf3d35d1%3A0x1e188b38f1793b8d!2zNyBDcm5vZ29yc2tpaCBTZXJkYXJhLCBQb2Rnb3JpY2EgODEwMDAsINCm0YDQvdCwINCT0L7RgNCw!5e0!3m2!1ssr!2s!4v1704304779091!5m2!1ssr!2s"
 
     const locationLink = "https://maps.app.goo.gl/tbKvoxvAJAF4qkdv7"
 
     return (
-        <footer className="bg-gradient-to-r from-blue-900 via-blue-700 to-blue-900 text-white py-20">
-            <div className="container mx-auto px-6 lg:px-20">
+        <footer className="bg-gradient-to-r from-blue-900 via-blue-700 to-blue-900 text-white">
+            <div className="container mx-auto lg:px-20 py-16">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16 text-center md:text-left">
                     <div className="flex flex-col items-center gap-1">
                         <FaMapMarkerAlt className="text-blue-400 text-3xl mb-4" />
@@ -48,7 +59,7 @@ const Footer = () => {
                         </p>
                     </div>
                 </div>
-                <div className="rounded-lg overflow-hidden shadow-2xl">
+                <div className="md:rounded-lg overflow-hidden shadow-2xl">
                     <iframe
                         src={location}
                         width="100%"
@@ -60,6 +71,7 @@ const Footer = () => {
                     </iframe>
                 </div>
             </div>
+            <div className="text-center pt-0">&copy;{currentYear} IngInspekt - Sva prava zadrzana</div>
         </footer>
     )
 }
