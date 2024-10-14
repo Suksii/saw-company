@@ -12,5 +12,18 @@
         "o_nama": "O nama",
         "usluge": "Usluge",
         "kontakt": "Kontakt"
+    },
+    "footer": {
+        "kontakt": "Kontakt",
+        "adresa": "Adresa",
+        "telefon": "Telefon",
+        "mobilni": "Mobilni telefon",
+        "email": "Email",
+        "radno_vrijeme": "Radno vrijeme",
+        "pon-pet": "Ponedeljak - Petak:",
+        "sub-ned": "Subota - Nedelja:",
+        "ne_radimo": "Ne radimo",
+        "pogledaj_na_mapi": "Pogledaj na Google mapi",
+        "sva_prava": "Sva prava zadržana"
     }
 }

@@ -12,5 +12,18 @@
         "o_nama": "About Us",
         "usluge": "Services",
         "kontakt": "Contact"
+    },
+    "footer": {
+        "kontakt": "Contact",
+        "adresa": "Address",
+        "telefon": "Phone",
+        "mobilni": "Mobile Phone",
+        "email": "Email",
+        "radno_vrijeme": "Working hours",
+        "pon-pet": "Mon - Fri:",
+        "sub-ned": "Sat - Sun:",
+        "ne_radimo": "Closed",
+        "pogledaj_na_mapi": "View on Google Maps",
+        "sva_prava": "All rights reserved"
     }
 }

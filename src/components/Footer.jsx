@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { FaClock, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 
 const Footer = () => {
+
+    const { t } = useTranslation();
 
     const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
 
@@ -23,38 +26,38 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16 text-center md:text-left">
                     <div className="flex flex-col items-center gap-1">
                         <FaMapMarkerAlt className="text-blue-400 text-3xl mb-4" />
-                        <h2 className="text-2xl font-bold mb-4">Adresa</h2>
+                        <h2 className="text-2xl font-bold mb-4">{t('footer.adresa')}</h2>
                         <p className="text-gray-300">Crnogorskih serdara 7,</p>
                         <p className="text-gray-300">81000 Podgorica</p>
                         <a href={locationLink} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-500 hover:underline">
-                            Pogledajte na mapi
+                            {t('footer.pogledaj_na_mapi')}
                         </a>
                     </div>
                     <div className="flex flex-col items-center gap-1">
                         <FaPhoneAlt className="text-blue-400 text-3xl mb-4" />
-                        <h2 className="text-2xl font-bold mb-4">Kontakt</h2>
+                        <h2 className="text-2xl font-bold mb-4">{t('footer.kontakt')}</h2>
                         <p className="flex flex-col items-center justify-center">
-                            <span>Telefon</span>
+                            <span>{t('footer.telefon')}</span>
                             <span className="text-sm">+382 (0) 20 674 179</span>
                         </p>
                         <p className="flex flex-col items-center justify-center">
-                            <span>Mobilni telefon</span>
+                            <span>{t('footer.mobilni')}</span>
                             <span className="text-sm">+382 69 078 048</span>
                         </p>
                         <p className="flex flex-col items-center justify-center">
-                            <span>Email</span>
+                            <span>{t('footer.email')}</span>
                             <span className="text-sm">inginspekt@yahoo.com</span>
                         </p>
                     </div>
                     <div className="flex flex-col items-center gap-1">
                         <FaClock className="text-blue-400 text-3xl mb-4" />
-                        <h2 className="text-2xl font-bold mb-4">Radno vrijeme</h2>
+                        <h2 className="text-2xl font-bold mb-4">{t('footer.radno_vrijeme')}</h2>
                         <p className="flex flex-col items-center justify-center">
-                            <span className="">Ponedeljak - Petak</span>
+                            <span className="">{t('footer.pon-pet')}</span>
                             <span className="text-sm">07:00 - 15:00h</span>
                         </p>
                         <p className="flex flex-col items-center justify-center">
-                            <span className="text-blue-50">Subota - Nedelja</span>
+                            <span className="text-blue-50">{t('footer.sub-ned')}</span>
                             <span className="text-sm">Ne radimo</span>
                         </p>
                     </div>
@@ -71,7 +74,7 @@ const Footer = () => {
                     </iframe>
                 </div>
             </div>
-            <div className="text-center pt-0">&copy;{currentYear} IngInspekt - Sva prava zadrzana</div>
+            <div className="text-center pt-0">&copy;{currentYear} IngInspekt - {t('footer.sva_prava')}</div>
         </footer>
     )
 }
