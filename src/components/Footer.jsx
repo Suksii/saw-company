@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FaClock, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 
-const Footer = ({phone, phoneAleksa, sendEmail, phoneCall, emailAddress}) => {
+const Footer = ({ phone, phoneAleksa, sendEmail, phoneCall, emailAddress }) => {
 
     const { t } = useTranslation();
 
@@ -25,7 +25,9 @@ const Footer = ({phone, phoneAleksa, sendEmail, phoneCall, emailAddress}) => {
             <div className="container mx-auto lg:px-20 py-16">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16 text-center md:text-left">
                     <div className="flex flex-col items-center gap-1">
-                        <FaMapMarkerAlt className="text-blue-400 text-3xl mb-4" />
+                        <div className="p-3 flex justify-center items-center border-2 border-dashed border-blue-400 rounded-full mb-4">
+                            <FaMapMarkerAlt className="text-blue-400 text-3xl" />
+                        </div>
                         <h2 className="text-2xl font-bold mb-4">{t('footer.adresa')}</h2>
                         <p className="text-gray-300">Crnogorskih serdara 7,</p>
                         <p className="text-gray-300">81000 Podgorica</p>
@@ -34,7 +36,9 @@ const Footer = ({phone, phoneAleksa, sendEmail, phoneCall, emailAddress}) => {
                         </a>
                     </div>
                     <div className="flex flex-col items-center gap-1">
-                        <FaPhoneAlt className="text-blue-400 text-3xl mb-4" />
+                        <div className="p-3 flex justify-center items-center border-2 border-dashed border-blue-400 rounded-full mb-4">
+                            <FaPhoneAlt className="text-blue-400 text-3xl" />
+                        </div>
                         <h2 className="text-2xl font-bold mb-4">{t('footer.kontakt')}</h2>
                         <p className="flex flex-col items-center justify-center">
                             <span>{t('footer.telefon')}</span>
@@ -50,7 +54,9 @@ const Footer = ({phone, phoneAleksa, sendEmail, phoneCall, emailAddress}) => {
                         </p>
                     </div>
                     <div className="flex flex-col items-center gap-1">
-                        <FaClock className="text-blue-400 text-3xl mb-4" />
+                        <div className="p-3 flex justify-center items-center border-2 border-dashed border-blue-400 rounded-full mb-4">
+                            <FaClock className="text-blue-400 text-3xl" />
+                        </div>
                         <h2 className="text-2xl font-bold mb-4">{t('footer.radno_vrijeme')}</h2>
                         <p className="flex flex-col items-center justify-center">
                             <span className="">{t('footer.pon-pet')}</span>
