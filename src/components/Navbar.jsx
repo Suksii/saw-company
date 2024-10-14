@@ -66,8 +66,11 @@ const Navbar = () => {
                     </div>
                 </div>
             </nav>
-            <nav className="flex justify-end md:hidden items-center bg-blue-600 px-2 py-4">
-                <div className="z-50">
+            <nav className="relative">
+                <div className="absolute left-0 top-0 px-4 z-50">
+                    <img src={logo} alt="IngInspekt" className="h-24 w-24" />
+                </div>
+                <div className="z-50 absolute right-0 top-0 p-4">
                     <HamburgerMenu handleClick={handleClick} isOpen={toggle} />
                 </div>
             </nav>
