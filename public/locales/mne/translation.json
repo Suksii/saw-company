@@ -7,6 +7,11 @@
             "rus": "Ruski"
         }
     },
+    "paths": {
+        "o_nama": "о-nama",
+        "usluge": "usluge",
+        "kontakt": "kontakt"
+    },
     "navmenu": {
         "pocetna": "Početna",
         "o_nama": "O nama",

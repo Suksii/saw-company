@@ -6,10 +6,12 @@ import UNK from "../assets/languages/unk.gif";
 import RUS from "../assets/languages/rus.gif";
 import { useTranslation } from "react-i18next";
 import i18n from "../i18n";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Header = ({ phone, phoneAleksa, sendEmail, phoneCall, emailAddress }) => {
 
     const { t } = useTranslation();
+    const navigate = useNavigate();
 
     const languages = [
         {
@@ -29,10 +31,10 @@ const Header = ({ phone, phoneAleksa, sendEmail, phoneCall, emailAddress }) => {
         }
     ]
 
-
     const handleLanguage = (lang) => {
         i18n.changeLanguage(lang);
-    }
+        navigate(`/${lang}/`);
+    };
 
     return (
         <div className={`sticky top-0 flex justify-between h-fit items-center px-[5vw] bg-blue-900 z-50 font-medium`}>

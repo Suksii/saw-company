@@ -7,6 +7,11 @@
             "rus": "Russian"
         }
     },
+    "paths": {
+        "o_nama": "about-us",
+        "usluge": "services",
+        "kontakt": "contact"
+    },
     "navmenu": {
         "pocetna": "Home",
         "o_nama": "About Us",

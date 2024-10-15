@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import HamburgerMenu from './HamburgerMenu';
 import { useTranslation } from 'react-i18next';
 import logo from '../assets/images/logo1.png';
 import { useLocation } from 'react-router-dom';
+import i18n from '../i18n';
 
 const Navbar = () => {
 
@@ -19,10 +20,10 @@ const Navbar = () => {
 
 
     const navItems = [
-        { name: t('navmenu.pocetna'), link: '/' },
-        { name: t('navmenu.o_nama'), link: '/about' },
-        { name: t('navmenu.usluge'), link: '/services' },
-        { name: t('navmenu.kontakt'), link: '/contact' },
+        { name: t('navmenu.pocetna'), link: `/${i18n.language}` },
+        { name: t('navmenu.o_nama'), link: `/${i18n.language}/${t('paths.o_nama')}` },
+        { name: t('navmenu.usluge'), link: `/${i18n.language}/${t('paths.usluge')}` },
+        { name: t('navmenu.kontakt'), link: `/${i18n.language}/${t('paths.kontakt')}` },
     ];
 
     window.addEventListener('scroll', () => {

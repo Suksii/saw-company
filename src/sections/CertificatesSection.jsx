@@ -32,7 +32,7 @@ const CertificatesSection = () => {
                     <p className="text-2xl text-center border-b py-4 border-gray-300 font-semibold text-gray-700">
                         {sert.title}
                     </p>
-                    <div className="relative min-h-[300px] overflow-hidden duration-700 group">
+                    <div className="relative min-h-[300px] overflow-hidden group">
                         <div className="w-full h-full top-0 z-30 absolute">
                             <img
                                 src={sert.image}
@@ -40,7 +40,7 @@ const CertificatesSection = () => {
                                 className="p-8"
                             />
                         </div>
-                        <div className="absolute w-full inset-0 bg-blue-800 transform translate-y-full group-hover:translate-y-0 transition-all duration-700 ease-in-out z-0"></div>
+                        <div className="absolute w-full inset-0  bg-blue-800 transform translate-y-full group-hover:translate-y-0 transition-all duration-700 ease-in-out z-0"></div>
                     </div>
                 </div>
             ))}
