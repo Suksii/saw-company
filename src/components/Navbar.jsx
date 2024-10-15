@@ -15,7 +15,7 @@ const Navbar = () => {
     const path = useLocation().pathname;
 
     useEffect(() => {
-        setActive(path)
+        setActive(decodeURIComponent(path))
     }, [path])
 
 
@@ -45,6 +45,8 @@ const Navbar = () => {
         setToggle(!toggle)
     }
 
+
+
     return (
         <>
             <nav className={`hidden fixed w-full md:flex items-center z-40 ${sticky ? ' bg-blue-400 bg-opacity-80' : 'bg-transparent'} transition-all duration-500`}>
@@ -54,6 +56,8 @@ const Navbar = () => {
                     </div>
                     <div className="flex items-center gap-0.5">
                         {navItems.map((item, index) => {
+                            console.log(path, item.link);
+
                             return (
                                 <Link to={item.link}
                                     key={index}
