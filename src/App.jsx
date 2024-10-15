@@ -34,7 +34,7 @@ function App() {
       <div className="relative">
         <Navbar />
         <Routes>
-          <Route path={`/${i18n.language}/`} element={<HomePage />} />
+          <Route path={`/${i18n.language}`} element={<HomePage />} />
           <Route path={`/${i18n.language}/${t('paths.o_nama')}`} element={<AboutUs />} />
           <Route path={`/${i18n.language}/${t('paths.usluge')}`} element={<Services />} />
           <Route path={`/${i18n.language}/${t('paths.kontakt')}`} element={<Contact />} />

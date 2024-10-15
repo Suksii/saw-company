@@ -10,13 +10,14 @@ const Navbar = () => {
 
     const [toggle, setToggle] = useState(false);
     const [sticky, setSticky] = useState(false);
-    const [active, setActive] = useState('/');
+    // const [active, setActive] = useState(`/${i18n.language}/`);
     const { t } = useTranslation();
     const path = useLocation().pathname;
+    const decodedPath = decodeURIComponent(path);
 
-    useEffect(() => {
-        setActive(decodeURIComponent(path))
-    }, [path])
+    // useEffect(() => {
+    //     setActive(decodeURIComponent(path))
+    // }, [path, i18n.language])
 
 
     const navItems = [
@@ -45,8 +46,6 @@ const Navbar = () => {
         setToggle(!toggle)
     }
 
-
-
     return (
         <>
             <nav className={`hidden fixed w-full md:flex items-center z-40 ${sticky ? ' bg-blue-400 bg-opacity-80' : 'bg-transparent'} transition-all duration-500`}>
@@ -56,13 +55,12 @@ const Navbar = () => {
                     </div>
                     <div className="flex items-center gap-0.5">
                         {navItems.map((item, index) => {
-                            console.log(path, item.link);
-
+                            console.log(decodedPath, item.link);
                             return (
                                 <Link to={item.link}
                                     key={index}
                                     onClick={() => scrollOnTop("instant")}
-                                    className={`text-xl font-semibold text-blue-50 duration-500 px-3 py-2 hover:bg-blue-600 ${active === item.link ? 'bg-blue-600' : ''}`}>
+                                    className={`text-xl font-semibold text-blue-50 duration-500 px-3 py-2 hover:bg-blue-600 ${decodedPath === decodeURIComponent(item.link) ? 'bg-blue-600' : ''}`}>
                                     {item.name}
                                 </Link>
                             );

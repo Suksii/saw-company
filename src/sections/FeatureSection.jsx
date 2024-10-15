@@ -1,22 +1,26 @@
 import { Link } from "react-router-dom";
+import i18n from "../i18n";
+import { useTranslation } from "react-i18next";
 
 const FeatureSection = () => {
+
+    const { t } = useTranslation();
 
     const cards = [
         {
             title: 'Naše usluge',
             description: 'We provide inspection services for all types of industrial equipment and machinery.',
-            link: 'contact'
+            link: t('paths.kontakt')
         },
         {
             title: 'Ispitivanja i pregledi',
             description: 'We provide inspection services for all types of industrial equipment and machinery.',
-            link: '/about'
+            link: t('paths.usluge')
         },
         {
             title: 'Obuka i dokumentacija',
             description: 'We provide inspection services for all types of industrial equipment and machinery.',
-            link: '/services'
+            link: t('paths.o_nama')
         }
     ]
 

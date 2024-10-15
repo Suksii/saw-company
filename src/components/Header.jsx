@@ -6,7 +6,7 @@ import UNK from "../assets/languages/unk.gif";
 import RUS from "../assets/languages/rus.gif";
 import { useTranslation } from "react-i18next";
 import i18n from "../i18n";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Header = ({ phone, phoneAleksa, sendEmail, phoneCall, emailAddress }) => {
 
@@ -33,8 +33,10 @@ const Header = ({ phone, phoneAleksa, sendEmail, phoneCall, emailAddress }) => {
 
     const handleLanguage = (lang) => {
         i18n.changeLanguage(lang);
-        navigate(`/${lang}/`);
+        navigate(`/${lang}`);
     };
+
+
 
     return (
         <div className={`sticky top-0 flex justify-between h-fit items-center px-[5vw] bg-blue-900 z-50 font-medium`}>
@@ -60,7 +62,7 @@ const Header = ({ phone, phoneAleksa, sendEmail, phoneCall, emailAddress }) => {
                         return (
                             <div key={index}
                                 title={lang.alt}
-                                className={`p-4  cursor-pointer hover:bg-blue-700 border-blue-50 ${index === 0 && 'border-l'} border-r`}
+                                className={`p-4  cursor-pointer hover:bg-blue-700 ${i18n.language === lang.lang ? 'bg-blue-700' : ''} border-blue-50 ${index === 0 && 'border-l'} border-r`}
                                 onClick={() => handleLanguage(lang.lang)}
                             >
                                 <img src={lang.image}
