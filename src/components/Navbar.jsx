@@ -50,7 +50,6 @@ const Navbar = () => {
                     </div>
                     <div className="flex items-center gap-0.5">
                         {navItems.map((item, index) => {
-                            console.log(decodedPath, item.link);
                             return (
                                 <Link to={item.link}
                                     key={index}
