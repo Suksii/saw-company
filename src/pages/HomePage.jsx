@@ -2,7 +2,7 @@ import FeatureSection from "../sections/FeatureSection";
 import CertificatesSection from "../sections/CertificatesSection";
 import HeaderSection from "../sections/HeaderSection";
 import TeamSection from "../sections/TeamSection";
-import CompanyCounter from "../sections/CompanyCounter";
+import CompanyCountUp from "../sections/CompanyCountUp";
 
 const HomePage = () => {
 
@@ -11,7 +11,7 @@ const HomePage = () => {
             <HeaderSection />
             <FeatureSection />
             <CertificatesSection />
-            <CompanyCounter />
+            <CompanyCountUp />
             <TeamSection />
         </>
     );

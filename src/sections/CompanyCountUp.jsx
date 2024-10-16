@@ -1,6 +1,7 @@
+import CountUp from "react-countup";
 import { FaSmile } from "react-icons/fa";
 
-const CompanyCounter = () => {
+const CompanyCountUp = () => {
 
     const companyDetails = [
         {
@@ -32,7 +33,7 @@ const CompanyCounter = () => {
                 {companyDetails.map((detail, index) => (
                     <div className="flex flex-col gap-2 items-center justify-center">
                         <span className="text-7xl text-blue-50">{detail.icon}</span>
-                        <h2 className="text-7xl text-blue-50">{detail.counter}</h2>
+                        <CountUp start={0} end={detail.counter} duration={3} className="text-7xl text-blue-50" />
                         <h3 className="text-2xl uppercase font-semibold text-blue-50">{detail.title}</h3>
                     </div>
                 ))}
@@ -41,4 +42,4 @@ const CompanyCounter = () => {
     )
 }
 
-export default CompanyCounter;
+export default CompanyCountUp;
