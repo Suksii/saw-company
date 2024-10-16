@@ -1,5 +1,10 @@
 import CountUp from "react-countup";
-import { FaSmile } from "react-icons/fa";
+import Stars from '../assets/icons/star.svg'
+import Clock from '../assets/icons/clock.svg'
+import Connection from '../assets/icons/connection.svg'
+import Smile from '../assets/icons/smile.svg'
+import Spiral from '../assets/icons/spiral.svg'
+
 
 const CompanyCountUp = () => {
 
@@ -7,32 +12,32 @@ const CompanyCountUp = () => {
         {
             title: 'Years with you',
             counter: '22',
-            icon: <FaSmile />
+            icon: Connection
         },
         {
             title: 'Happy clients',
             counter: '147',
-            icon: <FaSmile />
+            icon: Smile
         },
         {
             title: 'Hard workers',
             counter: '9',
-            icon: <FaSmile />
+            icon: Stars
         },
         {
             title: 'Different services',
             counter: '12',
-            icon: <FaSmile />
+            icon: Spiral
         },
     ]
 
     return (
         <div className="bg-gradient-to-r from-blue-900 via-blue-700 to-blue-900 flex flex-col items-center justify-center w-full gap-24 py-16">
             <h1 className="text-5xl text-center text-blue-50">Safety at Work since 2002</h1>
-            <div className="flex justify-around w-full">
+            <div className="flex flex-wrap justify-around gap-y-8 w-full">
                 {companyDetails.map((detail, index) => (
                     <div className="flex flex-col gap-2 items-center justify-center">
-                        <span className="text-7xl text-blue-50">{detail.icon}</span>
+                        <img src={detail.icon} alt={detail.title} className="w-24 h-24"/>
                         <CountUp start={0} end={detail.counter} duration={3} className="text-7xl text-blue-50" />
                         <h3 className="text-2xl uppercase font-semibold text-blue-50">{detail.title}</h3>
                     </div>
