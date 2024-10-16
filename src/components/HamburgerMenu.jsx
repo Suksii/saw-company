@@ -1,7 +1,5 @@
 const HamburgerMenu = ({handleClick, isOpen}) => {
 
-
-
     return (
         <button onClick={handleClick}
             className="flex flex-col justify-center items-center">

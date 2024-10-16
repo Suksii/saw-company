@@ -10,14 +10,9 @@ const Navbar = () => {
 
     const [toggle, setToggle] = useState(false);
     const [sticky, setSticky] = useState(false);
-    // const [active, setActive] = useState(`/${i18n.language}/`);
     const { t } = useTranslation();
     const path = useLocation().pathname;
     const decodedPath = decodeURIComponent(path);
-
-    // useEffect(() => {
-    //     setActive(decodeURIComponent(path))
-    // }, [path, i18n.language])
 
 
     const navItems = [
@@ -60,7 +55,7 @@ const Navbar = () => {
                                 <Link to={item.link}
                                     key={index}
                                     onClick={() => scrollOnTop("instant")}
-                                    className={`text-xl font-semibold text-blue-50 duration-500 px-3 py-2 hover:bg-blue-600 ${decodedPath === decodeURIComponent(item.link) ? 'bg-blue-600' : ''}`}>
+                                    className={`text-xl font-semibold text-blue-50 duration-500 px-3 py-2 hover:bg-blue-600 ${decodedPath === item.link ? 'bg-blue-600' : ''}`}>
                                     {item.name}
                                 </Link>
                             );

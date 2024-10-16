@@ -8,7 +8,6 @@ import { Route, Routes, useParams } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import Footer from './components/Footer'
 import i18n from './i18n'
-import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 
 
