@@ -1,4 +1,4 @@
-# Safety at Work company project
+# Safety at Work company project (in progress)
 
 ## About
 
