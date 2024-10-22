@@ -38,7 +38,7 @@ const CompanyCountUp = () => {
                 {companyDetails.map((detail, index) => (
                     <div className="flex flex-col gap-2 items-center justify-center">
                         <img src={detail.icon} alt={detail.title} className="w-24 h-24"/>
-                        <CountUp start={0} end={detail.counter} duration={3} className="text-7xl text-blue-50" />
+                        <CountUp start={0} end={detail.counter} duration={3} useEasing={true} className="text-7xl text-blue-50" />
                         <h3 className="text-2xl uppercase font-semibold text-blue-50">{detail.title}</h3>
                     </div>
                 ))}
