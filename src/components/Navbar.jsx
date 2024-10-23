@@ -43,7 +43,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className={`hidden fixed w-full md:flex items-center z-40 ${sticky ? ' bg-blue-400 bg-opacity-80' : 'bg-transparent'} transition-all duration-500`}>
+            <nav className={`hidden fixed w-full md:flex items-center z-40 ${sticky ? ' bg-blue-400' : 'bg-transparent'} transition-all duration-500`}>
                 <div className="md:w-[70%] lg:w-[60%] mx-auto flex justify-between items-center">
                     <div className="relative">
                         <img src={logo} alt="IngInspekt" className="h-24 w-24" />
