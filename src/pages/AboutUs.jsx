@@ -1,5 +1,6 @@
 import Logo from "../assets/images/logo2.png";
 import Photo from "../assets/images/construction.jpg";
+import CertificatesSection from "../sections/CertificatesSection";
 
 const AboutUs = () => {
   return (
@@ -24,16 +25,16 @@ const AboutUs = () => {
           <div className="absolute bg-gradient-to-b lg:bg-gradient-to-r from-transparent to-gray-50 top-0 w-full h-full"></div>
         </div>
         <div
-          className="flex flex-col items-center justify-center text-center"
+          className="flex flex-col items-center justify-center text-center gap-8 px-4"
           style={{ flex: 1 }}
         >
-          <p className="text-lg text-gray-600 leading-relaxed mb-6">
+          <p className="text-lg text-gray-600 leading-relaxed">
             IngInspekt d.o.o je osnovan 2005. godine u Podgorici. Posvećeni smo
             pružanju vrhunskih usluga u oblasti zaštite na radu. Sa
             dugogodišnjim iskustvom, naš tim stručnjaka obezbeđuje efikasna
             rješenja koja ispunjavaju najviše standarde bezbjednosti na radu.
           </p>
-          <p className="text-lg text-gray-600 leading-relaxed mb-6">
+          <p className="text-lg text-gray-600 leading-relaxed">
             Naša misija je da obezbijedimo sigurno i zdravo radno okruženje za
             sve zaposlene, kao i da pomognemo poslodavcima da ispunjavaju sve
             zakonske obaveze u oblasti zaštite na radu.
@@ -49,6 +50,18 @@ const AboutUs = () => {
       </section>
       <section className="mt-12 flex justify-center">
         <img src={Logo} alt="logo" className="w-[90%] h-auto object-contain" />
+      </section>
+      <section className="py-12 px-6 sm:px-12 lg:px-24 rounded-lg shadow-md">
+        <h3 className="text-3xl font-semibold text-gray-800 mb-6 text-center">
+          Naši sertifikati
+        </h3>
+        <p className="text-lg text-gray-600 leading-relaxed mb-8 max-w-3xl mx-auto text-center">
+          Ponosni smo na naše sertifikate koji potvrđuju našu posvećenost
+          najvišim standardima kvaliteta i bezbednosti. Svaki sertifikat
+          predstavlja naše iskustvo, stručnost i kontinuirani rad na unapređenju
+          naših usluga.
+        </p>
+        <CertificatesSection />
       </section>
     </div>
   );
