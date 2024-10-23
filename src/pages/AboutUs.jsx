@@ -2,20 +2,17 @@ import Logo from "../assets/images/logo2.png";
 import Photo from "../assets/images/construction.jpg";
 import CertificatesSection from "../sections/CertificatesSection";
 import TeamSection from "../sections/TeamSection";
+import HeaderTitle from "../components/HeaderTitle";
 
 const AboutUs = () => {
   return (
     <div className="bg-gray-50">
-      <section className="bg-blue-400 py-16 md:py-32 w-full">
-        <h1 className="text-4xl font-bold mb-8 text-center text-blue-50">
-          O nama
-        </h1>
-        <p className="text-lg text-blue-50 max-w-2xl mx-auto text-center">
-          Naš tim je posvećen pružanju usluga vrhunskog kvaliteta, sa fokusom na
-          poverenje, inovaciju i izvrsnost. Cilj nam je da gradimo dugoročne
-          odnose i postižemo rezultate koji premašuju očekivanja.
-        </p>
-      </section>
+      <HeaderTitle
+        title="O nama"
+        description="Naš tim je posvećen pružanju usluga vrhunskog kvaliteta, sa fokusom na
+        poverenje, inovaciju i izvrsnost. Cilj nam je da gradimo dugoročne
+        odnose i postižemo rezultate koji premašuju očekivanja."
+      />
       <section className="flex flex-col lg:flex-row">
         <div style={{ flex: 1 }} className="relative w-full h-full">
           <img
