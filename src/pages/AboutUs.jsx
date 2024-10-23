@@ -1,6 +1,7 @@
 import Logo from "../assets/images/logo2.png";
 import Photo from "../assets/images/construction.jpg";
 import CertificatesSection from "../sections/CertificatesSection";
+import TeamSection from "../sections/TeamSection";
 
 const AboutUs = () => {
   return (
@@ -51,7 +52,7 @@ const AboutUs = () => {
       <section className="mt-12 flex justify-center">
         <img src={Logo} alt="logo" className="w-[90%] h-auto object-contain" />
       </section>
-      <section className="py-12 px-6 sm:px-12 lg:px-24 rounded-lg shadow-md">
+      <section className="py-12">
         <h3 className="text-3xl font-semibold text-gray-800 mb-6 text-center">
           Naši sertifikati
         </h3>
@@ -62,6 +63,19 @@ const AboutUs = () => {
           naših usluga.
         </p>
         <CertificatesSection />
+      </section>
+      <section>
+        <h3 className="text-3xl font-semibold text-gray-800 mb-6 text-center">
+          Naš tim
+        </h3>
+        <p className="text-lg text-gray-600 leading-relaxed mb-8 max-w-3xl mx-auto text-center">
+          Naš tim čine iskusni profesionalci posvećeni pružanju vrhunskih usluga
+          i rešenja. Svaki član našeg tima donosi jedinstvene veštine i
+          stručnost, omogućavajući nam da se suočimo sa svakim izazovom i
+          ostvarimo ciljeve naših klijenata. Zajedno radimo kako bismo osigurali
+          najbolje rezultate i gradili dugoročne partnerske odnose.
+        </p>
+        <TeamSection />
       </section>
     </div>
   );
