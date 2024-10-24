@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import construction from "../assets/images/construction.jpg";
 import { MdArrowBackIos } from "react-icons/md";
 import { MdArrowForwardIos } from "react-icons/md";
@@ -8,6 +8,14 @@ const HeaderSection = () => {
   const titles = ["Home page", "Welcome", "Hello, good evening"];
 
   const [shownIndex, setShownIndex] = useState(0);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      showNext();
+    }, 6000);
+
+    return () => clearTimeout(timeout);
+  }, [shownIndex]);
 
   const showNext = () => {
     if (shownIndex !== titles.length - 1) {
