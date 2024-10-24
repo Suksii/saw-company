@@ -9,19 +9,19 @@ const HeaderSection = () => {
   const titles = [
     {
       title: "Home page",
-      link: "/usluge",
+      link: t("paths.kontakt"),
     },
     {
       title: "Welcome",
-      link: "/usluge",
+      link: t("paths.usluge"),
     },
     {
       title: "Hello",
-      link: "/usluge",
+      link: t("paths.o_nama"),
     },
     {
       title: "good evening",
-      link: "/usluge",
+      link: t("paths.usluge"),
     },
   ];
 
