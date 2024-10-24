@@ -3,9 +3,27 @@ import construction from "../assets/images/construction.jpg";
 import { MdArrowBackIos } from "react-icons/md";
 import { MdArrowForwardIos } from "react-icons/md";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const HeaderSection = () => {
-  const titles = ["Home page", "Welcome", "Hello, good evening"];
+  const titles = [
+    {
+      title: "Home page",
+      link: "/usluge",
+    },
+    {
+      title: "Welcome",
+      link: "/usluge",
+    },
+    {
+      title: "Hello",
+      link: "/usluge",
+    },
+    {
+      title: "good evening",
+      link: "/usluge",
+    },
+  ];
 
   const [shownIndex, setShownIndex] = useState(0);
 
@@ -36,6 +54,8 @@ const HeaderSection = () => {
     setShownIndex(index);
   };
 
+  const navigate = useNavigate();
+
   return (
     <div
       className="h-[70vh] flex items-center justify-center bg-cover bg-center relative"
@@ -52,27 +72,56 @@ const HeaderSection = () => {
         size={38}
         onClick={showNext}
       />
-      <motion.p
+      <div
+        className="flex flex-col justify-center items-center gap-4"
         key={shownIndex}
-        initial={{ opacity: 0, y: 150, scale: 0.8 }}
-        animate={{
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          transition: {
+      >
+        <motion.p
+          initial={{ opacity: 0, y: 150, scale: 0.8 }}
+          animate={{
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            transition: {
+              type: "spring",
+              stiffness: 300,
+              damping: 15,
+              duration: 1.2,
+            },
+          }}
+          exit={{ opacity: 0, y: 50, scale: 0.8 }}
+          transition={{ duration: 1.2 }}
+          className="relative text-white text-2xl md:text-4xl font-bold"
+        >
+          {titles[shownIndex].title}
+        </motion.p>
+        <motion.p
+          initial={{ y: 30, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{
             type: "spring",
             stiffness: 300,
             damping: 15,
-            duration: 1.2,
-          },
-        }}
-        exit={{ opacity: 0, y: 50, scale: 0.8 }}
-        transition={{ duration: 1.2 }}
-        className="relative text-white text-4xl font-bold"
-      >
-        {titles[shownIndex]}
-      </motion.p>
-
+            duration: 0.8,
+          }}
+          whileHover={{
+            y: -5,
+            scale: 1.1,
+            boxShadow: "0px 10px 15px rgba(0, 0, 0, 0.2)",
+            transition: {
+              type: "spring",
+              stiffness: 400,
+              damping: 10,
+              duration: 0.3,
+            },
+          }}
+          whileTap={{ scale: 0.9, y: 5 }}
+          className="relative px-4 py-2 bg-blue-700 text-blue-50 font-semibold rounded-sm cursor-pointer"
+          onClick={() => navigate(titles[shownIndex].link)}
+        >
+          Show more
+        </motion.p>
+      </div>
       <div className="absolute left-1/2 -translate-x-1/2 bottom-10">
         <div className="flex gap-3 items-center">
           {titles.map((_, index) => (
