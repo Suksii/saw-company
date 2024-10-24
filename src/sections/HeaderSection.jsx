@@ -4,8 +4,12 @@ import { MdArrowBackIos } from "react-icons/md";
 import { MdArrowForwardIos } from "react-icons/md";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const HeaderSection = () => {
+
+  const { t } = useTranslation();
+
   const titles = [
     {
       title: "Home page",
