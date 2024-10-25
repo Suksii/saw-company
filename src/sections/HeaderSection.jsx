@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const HeaderSection = () => {
-
   const { t } = useTranslation();
 
   const titles = [

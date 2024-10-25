@@ -8,7 +8,7 @@ const FeatureSection = () => {
 
   const cards = [
     {
-      title: "Naše usluge",
+      title: "Obuka zaposlenih",
       description:
         "We provide inspection services for all types of industrial equipment and machinery.",
       link: t("paths.kontakt"),
@@ -20,7 +20,7 @@ const FeatureSection = () => {
       link: t("paths.usluge"),
     },
     {
-      title: "Obuka i dokumentacija",
+      title: "Izrada dokumentacije",
       description:
         "We provide inspection services for all types of industrial equipment and machinery.",
       link: t("paths.o_nama"),
