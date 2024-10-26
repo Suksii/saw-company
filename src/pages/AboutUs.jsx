@@ -46,10 +46,10 @@ const AboutUs = () => {
           </p>
         </div>
       </section>
-      <section className="mt-12 flex justify-center">
+      <section className="mt-12 flex justify-center w-[70%] md:w-[50%] mx-auto">
         <img src={Logo} alt="logo" className="w-[90%] h-auto object-contain" />
       </section>
-      <section className="py-12">
+      <section className="py-4">
         <h3 className="text-3xl font-semibold text-gray-800 mb-6 text-center">
           Naši sertifikati
         </h3>

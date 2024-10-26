@@ -1,12 +1,15 @@
 import { AiFillMail } from "react-icons/ai";
 import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
+import Input from "./Input";
 
 const ContactForm = () => {
   return (
     <div className="flex flex-col md:flex-row bg-gradient-to-r from-blue-200 via-blue-100 to-blue-200 gap-6 items-center py-8">
       <div className="w-full md:w-1/2">
         <div className="flex flex-col gap-6 justify-center text-center w-2/3 mx-auto">
-          <h2 className="text-2xl text-blue-900 font-semibold">Kontakt informacije</h2>
+          <h2 className="text-2xl text-blue-900 font-semibold">
+            Kontakt informacije
+          </h2>
           <p className="text-lg text-blue-800">
             Hvala vam što ste zainteresovani za naše usluge u oblasti zaštite na
             radu. Vaša bezbijednost i dobrobit su nam od najvećeg značaja.
@@ -30,7 +33,9 @@ const ContactForm = () => {
 
       <div className="w-full md:w-1/2">
         <div className="flex flex-col justify-center items-center gap-4 text-center w-2/3 mx-auto">
-          <h3 className="text-2xl text-blue-800 font-semibold">Kontaktirajte nas putem forme</h3>
+          <h3 className="text-2xl text-blue-800 font-semibold">
+            Kontaktirajte nas putem forme
+          </h3>
           <p className="text-lg text-blue-800 pb-2">
             Imate pitanja, želite saznati više o našim uslugama ili vam je
             potrebna dodatna informacija? Ne ustručavajte se da nas
@@ -39,38 +44,11 @@ const ContactForm = () => {
         </div>
         <form className="flex flex-col gap-6 w-[80%] mx-auto pt-4">
           <div className="flex flex-col md:flex-row gap-6">
-            <div className="relative w-full">
-              <input
-                type="text"
-                placeholder=" "
-                className="w-full p-2 bg-transparent focus:outline-none border-b border-b-blue-900 outline-none peer"
-              />
-              <label className="absolute left-2 top-1/2 transform -translate-y-1/2 text-blue-900 transition-all duration-200 pointer-events-none peer-placeholder-shown:top-1/2 peer-placeholder-shown:left-2 peer-focus:-top-2 peer-focus:left-1 peer-focus:text-sm peer-focus:text-blue-500">
-                Your Full Name
-              </label>
-            </div>
-            <div className="relative w-full">
-              <input
-                type="text"
-                placeholder=" "
-                className="w-full p-2 bg-transparent focus:outline-none border-b border-b-blue-900 outline-none peer"
-              />
-              <label className="absolute left-2 top-1/2 transform -translate-y-1/2 text-blue-900 transition-all duration-200 pointer-events-none peer-placeholder-shown:top-1/2 peer-placeholder-shown:left-2 peer-focus:-top-2 peer-focus:left-1 peer-focus:text-sm peer-focus:text-blue-600">
-                Your Email
-              </label>
-            </div>
+            <Input type="text" label="Your Full Name" />
+            <Input type="email" label="Your Email" />
           </div>
           <div className="w-full">
-            <div className="relative w-full">
-              <input
-                type="text"
-                placeholder=" "
-                className="w-full p-2 bg-transparent focus:outline-none border-b border-b-blue-900 outline-none peer"
-              />
-              <label className="absolute left-2 top-1/2 transform -translate-y-1/2 text-blue-900 transition-all duration-200 pointer-events-none peer-placeholder-shown:top-1/2 peer-placeholder-shown:left-2 peer-focus:-top-2 peer-focus:left-1 peer-focus:text-sm peer-focus:text-blue-600">
-                Subject
-              </label>
-            </div>
+            <Input type="text" label="Subject" />
           </div>
           <div className="w-full">
             <div className="relative w-full">
