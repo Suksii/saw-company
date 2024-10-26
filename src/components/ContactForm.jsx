@@ -1,6 +1,7 @@
 import { AiFillMail } from "react-icons/ai";
 import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import Input from "./Input";
+import Textarea from "./Textarea";
 
 const ContactForm = () => {
   return (
@@ -51,16 +52,7 @@ const ContactForm = () => {
             <Input type="text" label="Subject" />
           </div>
           <div className="w-full">
-            <div className="relative w-full">
-              <textarea
-                type="text"
-                placeholder=" "
-                className="w-full p-2 bg-transparent focus:outline-none border-b border-b-blue-900 outline-none peer"
-              />
-              <label className="absolute left-2 top-2 transform -translate-y-1/2 text-blue-900 transition-all duration-200 pointer-events-none peer-placeholder-shown:top-4 peer-placeholder-shown:left-2 peer-focus:-top-2 peer-focus:left-1 peer-focus:text-sm peer-focus:text-blue-600">
-                Message
-              </label>
-            </div>
+            <Textarea label="Message"/>
           </div>
           <button className="w-48 bg-blue-900 py-2 rounded-sm text-blue-50 tracking-wider font-semibold">
             Submit
