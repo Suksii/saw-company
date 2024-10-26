@@ -6,23 +6,23 @@ const ContactForm = () => {
     <div className="flex flex-col md:flex-row bg-gradient-to-r from-blue-200 via-blue-100 to-blue-200 gap-6 items-center py-8">
       <div className="w-full md:w-1/2">
         <div className="flex flex-col gap-6 justify-center text-center w-2/3 mx-auto">
-          <h2 className="text-2xl">Kontakt informacije</h2>
-          <p className="text-lg">
+          <h2 className="text-2xl text-blue-900 font-semibold">Kontakt informacije</h2>
+          <p className="text-lg text-blue-800">
             Hvala vam što ste zainteresovani za naše usluge u oblasti zaštite na
             radu. Vaša bezbijednost i dobrobit su nam od najvećeg značaja.
           </p>
           <div className="flex flex-col gap-1 justify-center items-center md:items-start mx-auto">
             <div className="flex gap-2 items-center">
-              <FaMapMarkerAlt />
-              <p>Crnogorskih serdara 7, Podgorica</p>
+              <FaMapMarkerAlt className="text-blue-900" />
+              <p className="text-blue-800">Crnogorskih serdara 7, Podgorica</p>
             </div>
             <div className="flex gap-2 items-center">
-              <FaPhoneAlt />
-              <p>+382 69 078 048</p>
+              <FaPhoneAlt className="text-blue-900" />
+              <p className="text-blue-800">+382 69 078 048</p>
             </div>
             <div className="flex gap-2 items-center">
-              <AiFillMail />
-              <p>inginspekt@yahoo.com</p>
+              <AiFillMail className="text-blue-900" />
+              <p className="text-blue-800">inginspekt@yahoo.com</p>
             </div>
           </div>
         </div>
@@ -30,8 +30,8 @@ const ContactForm = () => {
 
       <div className="w-full md:w-1/2">
         <div className="flex flex-col justify-center items-center gap-4 text-center w-2/3 mx-auto">
-          <h3 className="text-2xl">Kontaktirajte nas putem forme</h3>
-          <p className="text-lg pb-2">
+          <h3 className="text-2xl text-blue-800 font-semibold">Kontaktirajte nas putem forme</h3>
+          <p className="text-lg text-blue-800 pb-2">
             Imate pitanja, želite saznati više o našim uslugama ili vam je
             potrebna dodatna informacija? Ne ustručavajte se da nas
             kontaktirate. Naš tim stručnjaka je tu da vam pomogne.
